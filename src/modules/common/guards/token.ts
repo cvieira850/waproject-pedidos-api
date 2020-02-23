@@ -40,6 +40,10 @@ export const CurrentUser = createParamDecorator((data, request: any) => {
   return request.user;
 });
 
+export const CurrentRequest = createParamDecorator((data, request: any) => {
+  return request.request;
+});
+
 export const AuthRequired = (roles?: enRoles[]) => (target: any, key?: string, descriptor?: any) => {
   SetMetadata('roles', roles || [])(target, key, descriptor);
   UseGuards(TokenGuard)(target, key, descriptor);
