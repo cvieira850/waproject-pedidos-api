@@ -29,7 +29,6 @@ export class MailService {
 
     const html = await this.renderTemplate(template, data);
     const mail: IMail = { from: MAIL.from, to, subject, html };
-    console.log(mail);
 
     /* istanbul ignore next */
     return IS_TEST ? mail : this.provider.send(mail);

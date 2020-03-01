@@ -2,6 +2,7 @@ import { BadRequestException, Injectable, NotFoundException } from '@nestjs/comm
 import { IRequest } from 'modules/database/interfaces/request';
 import { Request } from 'modules/database/models/request';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { RequestRepository } from '../repositories/request';
 
 @Injectable()
